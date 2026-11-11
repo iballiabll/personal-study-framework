@@ -1,0 +1,17 @@
+*
+!/.gitignore
+!/README.md
+!/index.html
+!/package.json
+!/vercel.json
+!/scripts/
+!/scripts/build.mjs
+!/src/
+!/src/app.js
+!/src/style.css
+!/src/study-core.js
+!/src/vocab-recite-api.js
+!/src/exam-scores.js
+!/src/writing-grade.js
+!/schema/
+!/schema/study-pack.schema.json
