@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; media-src blob:; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>个人学习站框架</title>
+  <link rel="stylesheet" href="./src/style.css">
+  <script src="./src/vocab-recite-api.js" defer></script>
+  <script src="./src/exam-scores.js" defer></script>
+  <script src="./src/study-core.js" defer></script>
+  <script src="./src/writing-grade.js" defer></script>
+  <script src="./src/app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>个人学习站框架</h1>
+      <p>用自己准备的资料练习词汇、阅读、听力和写作。资料在当前页面读取，练习记录保存在浏览器。</p>
+      <label for="pack">打开本地学习资料 JSON</label>
+      <input id="pack" type="file" accept=".json,application/json">
+      <p id="pack-status" role="status"></p>
+    </header>
+    <nav aria-label="学习模块">
+      <a href="#vocabulary">词汇</a><a href="#reading">阅读与判题</a><a href="#listening">听力与跟读</a><a href="#writing">写作</a>
+    </nav>
+    <section id="vocabulary">
+      <h2>词汇</h2>
+      <p id="word-status" role="status"></p>
+      <div id="word-list">导入资料后显示词卡。</div>
+    </section>
+    <section id="reading">
+      <h2>阅读与判题</h2>
+      <p id="quiz-status" role="status"></p>
+      <div id="question-list">导入资料后显示练习。</div>
+    </section>
+    <section id="listening">
+      <h2>听力与跟读</h2>
+      <label for="audio-file">打开本地音频</label>
+      <input id="audio-file" type="file" accept="audio/*">
+      <audio id="player" controls hidden></audio>
+      <label for="reference">参考文本</label>
+      <textarea id="reference" rows="3" maxlength="1500"></textarea>
+      <label for="transcript">听写或跟读转写</label>
+      <textarea id="transcript" rows="3" maxlength="1500"></textarea>
+      <button id="compare" type="button">对照文本</button>
+      <p id="comparison" role="status"></p>
+    </section>
+    <section id="writing">
+      <h2>写作</h2>
+      <label for="writing-prompt">自己的写作要求</label>
+      <textarea id="writing-prompt" rows="3" maxlength="2000"></textarea>
+      <label for="draft">作文草稿</label>
+      <textarea id="draft" rows="7" maxlength="12000"></textarea>
+      <button id="grade" type="button">估算得分</button>
+      <p id="writing-result" role="status"></p>
+    </section>
+    <footer>个人学习用途。判题以本地答案为准，写作分数是规则估算。</footer>
+  </main>
+</body>
+</html>

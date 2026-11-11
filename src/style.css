@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+:root { color-scheme: light; font: 16px/1.6 "Microsoft YaHei", system-ui, sans-serif; }
+body { margin: 0; background: #f3f5f3; color: #172b25; }
+main { width: min(54rem, calc(100% - 2rem)); margin: 2rem auto; }
+header, section { padding: clamp(1rem, 4vw, 2rem); margin: 1rem 0; background: #fff; border: 1px solid #ccd8d2; border-radius: .8rem; }
+h1, h2 { line-height: 1.25; margin: 0 0 .8rem; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; }
+a { color: #205e4b; }
+label { display: block; font-weight: 600; margin-top: .8rem; }
+textarea, input { max-width: 100%; font: inherit; }
+textarea { width: 100%; display: block; border: 1px solid #81978d; border-radius: .4rem; padding: .6rem; margin: .35rem 0 .65rem; }
+button { background: #205e4b; color: #fff; border: 0; border-radius: .4rem; padding: .45rem .75rem; font: inherit; cursor: pointer; }
+button + button { margin-inline-start: .35rem; }
+article { padding: 1rem 0; border-top: 1px solid #dce4df; }
+article p { white-space: pre-wrap; }
+audio { display: block; margin: .75rem 0; max-width: 100%; }
+[hidden] { display: none; }
+footer { padding: 1rem 0; }
